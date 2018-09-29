@@ -1,0 +1,23 @@
+INFO:tensorflow:Prefetching values from 280 files matching /media/pingan_ai/AI_Challenger/ImageCaption/TFrecords/train/train-?????-of-00280
+Traceback (most recent call last):
+  File "train.py", line 115, in <module>
+    tf.app.run()
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/python/platform/app.py", line 48, in run
+    _sys.exit(main(_sys.argv[:1] + flags_passthrough))
+  File "train.py", line 66, in main
+    model.build()
+  File "/home/pingan_ai/dxq/codes/im2txt-aic-attention-new/im2txt-aic/show_and_tell_model.py", line 433, in build
+    self.build_image_embeddings()
+  File "/home/pingan_ai/dxq/codes/im2txt-aic-attention-new/im2txt-aic/show_and_tell_model.py", line 218, in build_image_embeddings
+    scope=scope)
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/contrib/framework/python/ops/arg_scope.py", line 181, in func_with_args
+    return func(*args, **current_args)
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/contrib/layers/python/layers/layers.py", line 1639, in fully_connected
+    outputs = layer.apply(inputs)
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/python/layers/base.py", line 671, in apply
+    return self.__call__(inputs, *args, **kwargs)
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/python/layers/base.py", line 559, in __call__
+    self.build(input_shapes[0])
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/python/layers/core.py", line 127, in build
+    raise ValueError('The last dimension of the inputs to `Dense` '
+ValueError: The last dimension of the inputs to `Dense` should be defined. Found `None`.

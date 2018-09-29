@@ -1,0 +1,179 @@
+INFO:tensorflow:Prefetching values from 280 files matching /media/pingan_ai/AI_Challenger/ImageCaption/TFrecords/train/train-?????-of-00280
+2018-06-13 14:38:26.427075: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-06-13 14:38:26.454229: E tensorflow/stream_executor/cuda/cuda_driver.cc:406] failed call to cuInit: CUDA_ERROR_NO_DEVICE
+2018-06-13 14:38:26.454285: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:158] retrieving CUDA diagnostic information for host: pa-ai-PC
+2018-06-13 14:38:26.454292: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:165] hostname: pa-ai-PC
+2018-06-13 14:38:26.454329: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:189] libcuda reported version is: 384.130.0
+2018-06-13 14:38:26.454349: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:369] driver version file contents: """NVRM version: NVIDIA UNIX x86_64 Kernel Module  384.130  Wed Mar 21 03:37:26 PDT 2018
+GCC version:  gcc version 4.9.3 (Ubuntu 4.9.3-13ubuntu2) 
+"""
+2018-06-13 14:38:26.454361: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:193] kernel reported version is: 384.130.0
+2018-06-13 14:38:26.454367: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:300] kernel version seems to match DSO: 384.130.0
+INFO:tensorflow:Restoring parameters from /media/pingan_ai/AI_Challenger/ImageCaption/model/resnet/model.ckpt-0
+INFO:tensorflow:Starting Session.
+INFO:tensorflow:Saving checkpoint to path /media/pingan_ai/AI_Challenger/ImageCaption/model/resnet/model.ckpt
+INFO:tensorflow:Starting Queues.
+INFO:tensorflow:global_step/sec: 0
+2018-06-13 14:38:54.917977: W tensorflow/core/framework/op_kernel.cc:1192] Invalid argument: slice index 24 of dimension 1 out of bounds.
+2018-06-13 14:38:54.918143: W tensorflow/core/framework/op_kernel.cc:1192] Invalid argument: slice index 30 of dimension 1 out of bounds.
+2018-06-13 14:38:54.918154: W tensorflow/core/framework/op_kernel.cc:1192] Invalid argument: slice index 26 of dimension 1 out of bounds.
+2018-06-13 14:38:54.918200: W tensorflow/core/framework/op_kernel.cc:1192] Invalid argument: slice index 27 of dimension 1 out of bounds.
+2018-06-13 14:38:54.918224: W tensorflow/core/framework/op_kernel.cc:1192] Invalid argument: slice index 31 of dimension 1 out of bounds.
+2018-06-13 14:38:54.918244: W tensorflow/core/framework/op_kernel.cc:1192] Invalid argument: slice index 29 of dimension 1 out of bounds.
+2018-06-13 14:38:54.918268: W tensorflow/core/framework/op_kernel.cc:1192] Invalid argument: slice index 28 of dimension 1 out of bounds.
+2018-06-13 14:38:54.918246: W tensorflow/core/framework/op_kernel.cc:1192] Invalid argument: slice index 25 of dimension 1 out of bounds.
+2018-06-13 14:38:56.629514: W tensorflow/core/framework/op_kernel.cc:1192] Invalid argument: slice index 30 of dimension 1 out of bounds.
+2018-06-13 14:38:56.636408: W tensorflow/core/framework/op_kernel.cc:1192] Invalid argument: slice index 31 of dimension 1 out of bounds.
+2018-06-13 14:38:56.636742: W tensorflow/core/framework/op_kernel.cc:1192] Invalid argument: slice index 25 of dimension 1 out of bounds.
+2018-06-13 14:38:56.636805: W tensorflow/core/framework/op_kernel.cc:1192] Invalid argument: slice index 29 of dimension 1 out of bounds.
+2018-06-13 14:38:56.636868: W tensorflow/core/framework/op_kernel.cc:1192] Invalid argument: slice index 27 of dimension 1 out of bounds.
+2018-06-13 14:38:56.636996: W tensorflow/core/framework/op_kernel.cc:1192] Invalid argument: slice index 24 of dimension 1 out of bounds.
+2018-06-13 14:38:56.637019: W tensorflow/core/framework/op_kernel.cc:1192] Invalid argument: slice index 28 of dimension 1 out of bounds.
+2018-06-13 14:38:56.637039: W tensorflow/core/framework/op_kernel.cc:1192] Invalid argument: slice index 23 of dimension 1 out of bounds.
+2018-06-13 14:38:56.637162: W tensorflow/core/framework/op_kernel.cc:1192] Invalid argument: slice index 22 of dimension 1 out of bounds.
+2018-06-13 14:38:56.629450: W tensorflow/core/framework/op_kernel.cc:1192] Invalid argument: slice index 26 of dimension 1 out of bounds.
+INFO:tensorflow:Error reported to Coordinator: <class 'tensorflow.python.framework.errors_impl.InvalidArgumentError'>, Incompatible shapes: [1024] vs. [768]
+	 [[Node: OptimizeLoss/gradients/Mul_4_grad/BroadcastGradientArgs = BroadcastGradientArgs[T=DT_INT32, _device="/job:localhost/replica:0/task:0/device:CPU:0"](OptimizeLoss/gradients/Sum_1_grad/Tile/multiples, OptimizeLoss/gradients/Mul_4_grad/Shape_1)]]
+
+Caused by op u'OptimizeLoss/gradients/Mul_4_grad/BroadcastGradientArgs', defined at:
+  File "train.py", line 116, in <module>
+    tf.app.run()
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/python/platform/app.py", line 48, in run
+    _sys.exit(main(_sys.argv[:1] + flags_passthrough))
+  File "train.py", line 98, in main
+    learning_rate_decay_fn=learning_rate_decay_fn)
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/contrib/layers/python/layers/optimizers.py", line 241, in optimize_loss
+    colocate_gradients_with_ops=colocate_gradients_with_ops)
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/python/training/optimizer.py", line 414, in compute_gradients
+    colocate_gradients_with_ops=colocate_gradients_with_ops)
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/python/ops/gradients_impl.py", line 581, in gradients
+    grad_scope, op, func_call, lambda: grad_fn(op, *out_grads))
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/python/ops/gradients_impl.py", line 353, in _MaybeCompile
+    return grad_fn()  # Exit early
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/python/ops/gradients_impl.py", line 581, in <lambda>
+    grad_scope, op, func_call, lambda: grad_fn(op, *out_grads))
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/python/ops/math_grad.py", line 742, in _MulGrad
+    rx, ry = gen_array_ops._broadcast_gradient_args(sx, sy)
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/python/ops/gen_array_ops.py", line 532, in _broadcast_gradient_args
+    "BroadcastGradientArgs", s0=s0, s1=s1, name=name)
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/python/framework/op_def_library.py", line 787, in _apply_op_helper
+    op_def=op_def)
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 2956, in create_op
+    op_def=op_def)
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 1470, in __init__
+    self._traceback = self._graph._extract_stack()  # pylint: disable=protected-access
+
+...which was originally created as op u'Mul_4', defined at:
+  File "train.py", line 116, in <module>
+    tf.app.run()
+[elided 0 identical lines from previous traceback]
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/python/platform/app.py", line 48, in run
+    _sys.exit(main(_sys.argv[:1] + flags_passthrough))
+  File "train.py", line 67, in main
+    model.build()
+  File "/home/pingan_ai/dxq/codes/im2txt-aic-attention/im2txt-aic/show_and_tell_model.py", line 450, in build
+    self.build_model()
+  File "/home/pingan_ai/dxq/codes/im2txt-aic-attention/im2txt-aic/show_and_tell_model.py", line 406, in build_model
+    batch_loss = tf.div(tf.reduce_sum(tf.multiply(losses, weights)),
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/python/ops/math_ops.py", line 315, in multiply
+    return gen_math_ops._mul(x, y, name)
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/python/ops/gen_math_ops.py", line 2726, in _mul
+    "Mul", x=x, y=y, name=name)
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/python/framework/op_def_library.py", line 787, in _apply_op_helper
+    op_def=op_def)
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 2956, in create_op
+    op_def=op_def)
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 1470, in __init__
+    self._traceback = self._graph._extract_stack()  # pylint: disable=protected-access
+
+InvalidArgumentError (see above for traceback): Incompatible shapes: [1024] vs. [768]
+	 [[Node: OptimizeLoss/gradients/Mul_4_grad/BroadcastGradientArgs = BroadcastGradientArgs[T=DT_INT32, _device="/job:localhost/replica:0/task:0/device:CPU:0"](OptimizeLoss/gradients/Sum_1_grad/Tile/multiples, OptimizeLoss/gradients/Mul_4_grad/Shape_1)]]
+
+Traceback (most recent call last):
+  File "train.py", line 116, in <module>
+    tf.app.run()
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/python/platform/app.py", line 48, in run
+    _sys.exit(main(_sys.argv[:1] + flags_passthrough))
+  File "train.py", line 112, in main
+    saver=saver)
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/contrib/slim/python/slim/learning.py", line 775, in train
+    sv.stop(threads, close_summary_writer=True)
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/contextlib.py", line 35, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/python/training/supervisor.py", line 964, in managed_session
+    self.stop(close_summary_writer=close_summary_writer)
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/python/training/supervisor.py", line 792, in stop
+    stop_grace_period_secs=self._stop_grace_secs)
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/python/training/coordinator.py", line 389, in join
+    six.reraise(*self._exc_info_to_raise)
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/python/training/coordinator.py", line 296, in stop_on_exception
+    yield
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/python/training/coordinator.py", line 494, in run
+    self.run_loop()
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/python/training/supervisor.py", line 994, in run_loop
+    self._sv.global_step])
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/python/client/session.py", line 889, in run
+    run_metadata_ptr)
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/python/client/session.py", line 1120, in _run
+    feed_dict_tensor, options, run_metadata)
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/python/client/session.py", line 1317, in _do_run
+    options, run_metadata)
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/python/client/session.py", line 1336, in _do_call
+    raise type(e)(node_def, op, message)
+tensorflow.python.framework.errors_impl.InvalidArgumentError: Incompatible shapes: [1024] vs. [768]
+	 [[Node: OptimizeLoss/gradients/Mul_4_grad/BroadcastGradientArgs = BroadcastGradientArgs[T=DT_INT32, _device="/job:localhost/replica:0/task:0/device:CPU:0"](OptimizeLoss/gradients/Sum_1_grad/Tile/multiples, OptimizeLoss/gradients/Mul_4_grad/Shape_1)]]
+
+Caused by op u'OptimizeLoss/gradients/Mul_4_grad/BroadcastGradientArgs', defined at:
+  File "train.py", line 116, in <module>
+    tf.app.run()
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/python/platform/app.py", line 48, in run
+    _sys.exit(main(_sys.argv[:1] + flags_passthrough))
+  File "train.py", line 98, in main
+    learning_rate_decay_fn=learning_rate_decay_fn)
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/contrib/layers/python/layers/optimizers.py", line 241, in optimize_loss
+    colocate_gradients_with_ops=colocate_gradients_with_ops)
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/python/training/optimizer.py", line 414, in compute_gradients
+    colocate_gradients_with_ops=colocate_gradients_with_ops)
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/python/ops/gradients_impl.py", line 581, in gradients
+    grad_scope, op, func_call, lambda: grad_fn(op, *out_grads))
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/python/ops/gradients_impl.py", line 353, in _MaybeCompile
+    return grad_fn()  # Exit early
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/python/ops/gradients_impl.py", line 581, in <lambda>
+    grad_scope, op, func_call, lambda: grad_fn(op, *out_grads))
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/python/ops/math_grad.py", line 742, in _MulGrad
+    rx, ry = gen_array_ops._broadcast_gradient_args(sx, sy)
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/python/ops/gen_array_ops.py", line 532, in _broadcast_gradient_args
+    "BroadcastGradientArgs", s0=s0, s1=s1, name=name)
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/python/framework/op_def_library.py", line 787, in _apply_op_helper
+    op_def=op_def)
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 2956, in create_op
+    op_def=op_def)
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 1470, in __init__
+    self._traceback = self._graph._extract_stack()  # pylint: disable=protected-access
+
+...which was originally created as op u'Mul_4', defined at:
+  File "train.py", line 116, in <module>
+    tf.app.run()
+[elided 0 identical lines from previous traceback]
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/python/platform/app.py", line 48, in run
+    _sys.exit(main(_sys.argv[:1] + flags_passthrough))
+  File "train.py", line 67, in main
+    model.build()
+  File "/home/pingan_ai/dxq/codes/im2txt-aic-attention/im2txt-aic/show_and_tell_model.py", line 450, in build
+    self.build_model()
+  File "/home/pingan_ai/dxq/codes/im2txt-aic-attention/im2txt-aic/show_and_tell_model.py", line 406, in build_model
+    batch_loss = tf.div(tf.reduce_sum(tf.multiply(losses, weights)),
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/python/ops/math_ops.py", line 315, in multiply
+    return gen_math_ops._mul(x, y, name)
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/python/ops/gen_math_ops.py", line 2726, in _mul
+    "Mul", x=x, y=y, name=name)
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/python/framework/op_def_library.py", line 787, in _apply_op_helper
+    op_def=op_def)
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 2956, in create_op
+    op_def=op_def)
+  File "/home/pingan_ai/.conda/envs/tf_dxq/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 1470, in __init__
+    self._traceback = self._graph._extract_stack()  # pylint: disable=protected-access
+
+InvalidArgumentError (see above for traceback): Incompatible shapes: [1024] vs. [768]
+	 [[Node: OptimizeLoss/gradients/Mul_4_grad/BroadcastGradientArgs = BroadcastGradientArgs[T=DT_INT32, _device="/job:localhost/replica:0/task:0/device:CPU:0"](OptimizeLoss/gradients/Sum_1_grad/Tile/multiples, OptimizeLoss/gradients/Mul_4_grad/Shape_1)]]
+
